@@ -469,3 +469,9 @@ button:not(:disabled){
     opacity: 0.5;
     transform: scale(0.5);
 }
+
+/* 加载动画 */
+.loading-img {
+  background: url(https://img.keaitupian.cn/newupload/05/1683621565610736.jpg) no-repeat center center;
+  background-size: cover;
+}
