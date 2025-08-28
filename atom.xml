@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>寻</title>
+  
+  <subtitle>찾고 있는 집</subtitle>
+  <link href="https://hfghfgdshf.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://hfghfgdshf.github.io/"/>
+  <updated>2025-08-24T12:54:08.868Z</updated>
+  <id>https://hfghfgdshf.github.io/</id>
+  
+  <author>
+    <name>寻</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装butterfly主题</title>
+    <link href="https://hfghfgdshf.github.io/posts/53943.html"/>
+    <id>https://hfghfgdshf.github.io/posts/53943.html</id>
+    <published>2025-08-24T11:23:54.000Z</published>
+    <updated>2025-08-24T12:54:08.868Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、安装butterfly</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure><p>下载完之后根目录下会出现一个theme文件夹，里面就是主题文件</p><p>2、应用主题</p><p>a、将根目录文件夹下的_config.yml文件中的主题应用改为butterfly</p><p>b、安装渲染器</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure><p>c、在根目录创建一个_config.butterfly.yml文件，将主题文件中_config.yml文件内容复制到_config,butterfly.yml文件中</p><p>后期配置主题插件时一般只需更改_config.butterfly.yml文件，并且其优先级更高</p><p>注意：</p><p>前面安装butterfly使用的是GitHub如果下载失败可能需要科学上网，或者使用gitee下载：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b master https://gitee.com/immyw/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure><p>下载完成后依次输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>最后会生成一个网站，打开即可本地查看效果</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1、安装butterfly&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td cl</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo搭建博客网站</title>
+    <link href="https://hfghfgdshf.github.io/posts/22035.html"/>
+    <id>https://hfghfgdshf.github.io/posts/22035.html</id>
+    <published>2025-08-22T02:10:39.000Z</published>
+    <updated>2025-08-22T02:17:50.601Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、工具准备：</p><p>a、node.js环境</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://nodejs.org/en/</span><br></pre></td></tr></table></figure><p>b、安装git</p><p>包括：Git、TortoiseGit、TortoiseGit-LanguagePack（中文包）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://git-scm.com/downloads</span><br><span class="line">https://tortoisegit.org/download/</span><br></pre></td></tr></table></figure><p>c、检测是否安装成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git -v</span><br></pre></td></tr></table></figure><p>以管理员身份打开cmd，输入以上命令，如果回复相应安装版本就安装好辣</p><p>d、下载hexo</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><p>2、在github上创建仓库</p><p>仓库命名输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户名.github.io</span><br></pre></td></tr></table></figure><p>用户名就是自己github账号的名字，仓库勾选Public,勾选ADD A README</p><p>3、生成SSH KEYS</p><p>创建一个空文件夹，右键选中open Git bash here，输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮箱地址&quot;（注意：C是大写）</span><br></pre></td></tr></table></figure><p>回车4次后会生成一个.ssh文件，不要着急关掉命令窗口，文件地址在窗口里面显示，打开生成的id_rsa.pub文件复制内容，添加至github的SSH keys</p><p>测试是否添加成功，在Git bash here中输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line">yes</span><br></pre></td></tr></table></figure><p>没有出现warn或error就添加成功</p><p>4、初始化博客内容</p><p>新建文件夹，进入文件夹右键选择open Git bash here，依次输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">hexo install</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>如果出现command not found，就在命令前面添加npx，最后会生成一个链接，复制链接到浏览器就可以本地查看了（注意不要Ctrl + c复制，会关闭运行看不到了就）</p><p>5、发布博客</p><p>打开第4步创建的文件夹打开_config.yml文件，拉到最下面将deploy后面的全删掉，输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">repository: </span><br><span class="line">branch: main</span><br></pre></td></tr></table></figure><p>注意缩进，每条前面有两个空格，” : “后面有一个空格，将第2步创建github仓库的https地址复制添加至repository后面，保存退出</p><p>6、回到第4步的文件夹</p><p>a、安装部署工具</p><p>右键选择open Git bash here，输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>b、下载好之后，依次输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g   (生成)</span><br><span class="line">hexo d (上传)</span><br></pre></td></tr></table></figure><p>如果是第一次使用这个方式上传，还需要先输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;邮箱名字&quot;</span><br><span class="line">git config --global user.name &quot;用户名字&quot;</span><br></pre></td></tr></table></figure><p>上传后登录授权一下，至此初始化的网站已经上传成功，输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:// + &quot;仓库名&quot;</span><br></pre></td></tr></table></figure><p>就可以看刚刚创建的网站了，不过里面没有什么内容，还需要后期添加优化。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1、工具准备：&lt;/p&gt;
+&lt;p&gt;a、node.js环境&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pr</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://hfghfgdshf.github.io/posts/4a17b156.html"/>
+    <id>https://hfghfgdshf.github.io/posts/4a17b156.html</id>
+    <published>2025-08-20T05:34:48.233Z</published>
+    <updated>2025-08-20T10:03:52.965Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
